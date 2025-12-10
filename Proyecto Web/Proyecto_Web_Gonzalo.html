@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPD Racing</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Imagenes/Favicon.png" />
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Proyecto_Web_Gonzalo.css">
+</head>
+
+<body>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="./Videos/Video_paisaje2.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+    <!-- Contenido principal -->
+    <header>
+        <div class="cabecera">
+            <div>
+                <img src="./Imagenes/Logo1.png" alt="logo 1" class="logo">
+            </div>
+            <h1 class="titulo">GPD Racing</h1>
+            <div>
+                <img src="./Imagenes/Logo2.png" alt="logo 2" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="panel">
+            <h2>Servicios que ofrecemos</h2>
+
+            <ul>
+                <li>Mecánica General</li>
+                <ul>
+                    <li>Reparaciones de todo tipo</li>
+                    <li>Cambios de aceite</li>
+                    <li>Arreglo de pinchazos</li>
+                    <li>Centrado de ruedas</li>
+                    <li>Cambio de neumáticos</li>
+                </ul>
+
+                <li>Preparación de motor</li>
+                <ol>
+                    <li>Mejoras motor</li>
+                    <li>Carburación</li>
+                    <li>Fresado y encarado del cárter</li>
+                    <li>Preparado de cilindro</li>
+                    <li>Encarado de caja de láminas</li>
+                </ol>
+
+                <li>Piezas de la mejor calidad</li>
+                <ul>
+                    <li>Cilindros</li>
+                    <li>Cigüeñales</li>
+                    <li>Carburadores</li>
+                    <li>Caja de láminas</li>
+                    <li>Tobera</li>
+                    <li>Escapes</li>
+                </ul>
+            </ul>
+        </section>
+
+        <!-- GALERÍA -->
+        <section id="galeria" class="panel">
+            <h2>Galería de fotos de los motores de nuestros clientes</h2>
+            <div class="visor"><img src="" alt="" id="visor-img"></div>
+            <div class="galeria">
+                <img src="./Imagenes/Foto_1.jpeg" alt="Imagen 1">
+                <img src="./Imagenes/Foto_2.jpeg" alt="Imagen 2">
+                <img src="./Imagenes/Foto_3.jpeg" alt="Imagen 3">
+                <img src="./Imagenes/Foto_4.jpeg" alt="Imagen 4">
+                <img src="./Imagenes/Foto_5.jpeg" alt="Imagen 5">
+                <img src="./Imagenes/Foto_6.jpeg" alt="Imagen 6">
+                <img src="./Imagenes/Foto_7.jpeg" alt="Imagen 7">
+                <img src="./Imagenes/Foto_8.jpeg" alt="Imagen 8">
+                <img src="./Imagenes/Foto_9.jpeg" alt="Imagen 9">
+                <img src="./Imagenes/Foto_10.jpeg" alt="Imagen 10">
+                <img src="./Imagenes/Foto_11.jpeg" alt="Imagen 11">
+                <img src="./Imagenes/Foto_12.jpeg" alt="Imagen 12">
+                <img src="./Imagenes/Foto_13.jpeg" alt="Imagen 13">
+                <img src="./Imagenes/Foto_14.jpeg" alt="Imagen 14">
+                <img src="./Imagenes/Foto_15.jpeg" alt="Imagen 15">
+                <img src="./Imagenes/Foto_16.jpeg" alt="Imagen 16">
+            </div>
+        </section>
+        <script>
+            const visor = document.getElementById("visor-img");
+            const miniaturas = document.querySelectorAll(".galeria img");
+
+            miniaturas.forEach(img => {
+                img.addEventListener("click", function () {
+                    visor.src = this.src;       // Pone la imagen grande
+                    visor.alt = this.alt;
+                });
+            });
+        </script>
+
+        <!-- VIDEOS -->
+        <section id="videos" class="panel">
+            <h2>Vídeos de nuestro proyecto personal</h2>
+
+            <div class="video-todos">
+
+                <h3>Primer arranque del motor personal y prueba de funcionamiento</h3>
+                <div class="video-dual">
+                    <video src="./Videos/Video_Taller.mov" controls class="videos"></video>
+                    <video src="./Videos/Video_Moto1.mp4" controls class="videos"></video>
+                </div>
+
+                <h3>Proceso de preparación y resultado final</h3>
+                <div class="video-dual">
+                    <video src="./Videos/Video_Moto2.mov" controls class="videos"></video>
+                    <video src="./Videos/Video_Moto3.mov" controls class="videos"></video>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- AUDIO -->
+        <section class="panel">
+            <h2>Sonido de nuestros motores</h2>
+            <audio src="./Sonidos/sonido_moto.mp3" controls class="audio"></audio>
+        </section>
+
+        <!-- IFRAME YOUTUBE -->
+        <section class="panel">
+            <h2>Video explicativo</h2>
+            <h3>Vídeo de MikiMotos desmontando paso a paso un motor AM6</h3>
+
+            <div class="iframe">
+                <iframe src="https://www.youtube.com/embed/g4Nbekx5clA?si=_RNtFaCKWomwAsuo" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- TABLA -->
+        <section class="panel">
+            <h2>Tabla de Precios</h2>
+
+            <table class="precios">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Precio</th>
+                        <th>Tiempo</th>
+                        <th>Técnico</th>
+                        <th>Garantía</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Reparación o sustitución</td>
+                        <td>40€</td>
+                        <td>1h</td>
+                        <td>Antonio</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Preparación sencilla</td>
+                        <td>170€</td>
+                        <td>4h</td>
+                        <td>Gonzalo</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Preparación Top</td>
+                        <td>300€</td>
+                        <td>6h</td>
+                        <td>Gonzalo</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Preparación Plus</td>
+                        <td>420€</td>
+                        <td>8h</td>
+                        <td>Gonzalo</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Preparación Premium</td>
+                        <td>490€</td>
+                        <td>9h</td>
+                        <td>Gonzalo</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+
+        <!-- INFORMACION/FORMULARIO -->
+        <section id="contacto" class="panel">
+            <!-- Información de contacto -->
+            <div>
+                <h3>Nuestra ubicación</h3>
+                <p>Polígono industrial de Cuevas Del Almanzora nº 34,</p>
+                <p>04610 Cuevas del Almanzora, Almería</p>
+                <h4>Teléfono</h4>
+                <p><a href="tel:+34 621 012 345">621 012 345</a></p>
+                <h4>Email</h4>
+                <p><a href="mailto:info@gpdracing.com">info@gpdracing.com</a></p>
+                <h4>Horario</h4>
+                <p>Lunes a Viernes: 9:00 - 14:00 / 16:00 - 20:00</p>
+                <p>Sábados: 9:00 - 14:00</p>
+            </div>
+            <!-- FORMULARIO -->
+            <h2>Contacta con nosotros</h2>
+            <form id="contact-form">
+                <fieldset id="contact-form" class="contacto">
+                    <legend>Formulario de contacto</legend>
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Correo" required>
+                    <select name="servicio" required>
+                        <option value="" disabled selected>Selecciona un servicio</option>
+                        <option value="mecanica">Mecánica General</option>
+                        <option value="preparacion-sencilla">Preparación Sencilla</option>
+                        <option value="preparacion-top">Preparación Top</option>
+                        <option value="preparacion-plus">Preparación Plus</option>
+                        <option value="preparacion-premium">Preparación Premium</option>
+                        <option value="otro">Otro servicio</option>
+                    </select>
+                    <input type="tel" name="telefono" placeholder="Teléfono">
+                    <textarea name="mensaje" placeholder="Escribe tu consulta o servicio que desees..." rows="5"
+                        required></textarea>
+                    <button type="submit"><b>Enviar</b></button>
+                </fieldset>
+            </form>
+            <!-- MAPA -->
+            <h3>Estamos situados en el polígono industrial de Cuevas Del Almanzora nº 34</h3>
+            <div class="iframe">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!4v1764594698804!6m8!1m7!1sb4xzrlWxjuUuMS-z3wrSlQ!2m2!1d37.29073313050679!2d-1.889416950469853!3f217.6416164381692!4f-5.090698727899579!5f0.7820865974627469"
+                    allowfullscreen loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- HOW TO (W3Schools) -->
+        <section class="panel">
+            <h2 class="slides_h2">Aquí tenéis fotos de nuestros 3 motores personales:</h2>
+
+            <div class="Verslides">
+                <img class="mySlides" src="./Imagenes/Foto_1.jpeg" alt="Slide 1">
+                <img class="mySlides" src="./Imagenes/Foto_2.jpeg" alt="Slide 2">
+                <img class="mySlides" src="./Imagenes/Foto_3.jpeg" alt="Slide 3">
+
+                <button class="boton-anterior" onclick="plusDivs(-1)">Anterior</button>
+                <button class="boton-siguiente" onclick="plusDivs(1)">Siguiente</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© GPD Racing - Taller especializado en preparaciones de alto nivel ©</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Slideshow W3Schools
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+        // DOM: alternar estilo del header al hacer clic
+        document.querySelector("header").addEventListener("click", function () {
+            this.classList.toggle("alt");
+        });
+
+
+        // Formulario
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Gracias, " + this.nombre.value + ". Tu mensaje ha sido enviado.");
+            this.reset();
+        });
+
+    </script>
+
+</body>
+
+</html>
